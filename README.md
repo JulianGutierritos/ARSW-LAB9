@@ -46,12 +46,21 @@ Transcurridos los 5 minutos de inactividad, la aplicación vacia la memoria. Est
 **Preguntas**
 
 * ¿Qué es un Azure Function?
+
   Es una modalidad de Azure que nos permite ejecutar y editar fragementos de código en la nube.
 * ¿Qué es serverless?
+
   Se define como un tipo de arquitectura en la cual no existen servidores, ya sean físicos o en la nube, sino que el código corre se corre en un "ambiente de ejecución" que generalmente consiste en un contenedor sin estado administrado por un proveedor Cloud, en nuestro caso Azure. Esta arquitectura se caracterisa porque el cliente en este caso no se encarga de la administración de los recursos usados a la hora hora de ejecutar el código, sino que en esta ocasión la responsabilidad recae sobre el proveedor Cloud.
 * ¿Qué es el runtime y que implica seleccionarlo al momento de crear el Function App?
 * ¿Por qué es necesario crear un Storage Account de la mano de un Function App?
+  
+  Se debe crear porque las funciones dependen de un almacenamiento en Azure para realizar manejo de triggers y el registro de ejecuciones de las funciones
+  
 * ¿Cuáles son los tipos de planes para un Function App?, ¿En qué se diferencias?, mencione ventajas y desventajas de cada uno de ellos.
+
 * ¿Por qué la memoization falla o no funciona de forma correcta?
+
+  Esto se debe a que el entorno de ejecución libera los datos en memoria después de que el código lleva varios minutos sin ser ejecutado.
+  
 * ¿Cómo funciona el sistema de facturación de las Function App?
 * Informe
