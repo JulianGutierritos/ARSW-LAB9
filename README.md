@@ -39,6 +39,10 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 6. Cree una nueva Function que resuleva el problema de Fibonacci pero esta vez utilice un enfoque recursivo con memoization. Pruebe la función varias veces, después no haga nada por al menos 5 minutos. Pruebe la función de nuevo con los valores anteriores. ¿Cuál es el comportamiento?.
 
+Transcurridos los 5 minutos de inactividad, la aplicación vacia la memoria. Esto hace que al volver a repetir la solicitud hecha, esta tome mucho más tiempo, ya que tiene que volver a calcular todos los números de nuevo.
+
+![](images/part3/recursivo.PNG)
+
 **Preguntas**
 
 * ¿Qué es un Azure Function?
