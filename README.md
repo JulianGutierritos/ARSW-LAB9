@@ -52,15 +52,21 @@ Transcurridos los 5 minutos de inactividad, la aplicación vacia la memoria. Est
 
   Se define como un tipo de arquitectura en la cual no existen servidores, ya sean físicos o en la nube, sino que el código corre se corre en un "ambiente de ejecución" que generalmente consiste en un contenedor sin estado administrado por un proveedor Cloud, en nuestro caso Azure. Esta arquitectura se caracterisa porque el cliente en este caso no se encarga de la administración de los recursos usados a la hora hora de ejecutar el código, sino que en esta ocasión la responsabilidad recae sobre el proveedor Cloud.
 * ¿Qué es el runtime y que implica seleccionarlo al momento de crear el Function App?
+
 * ¿Por qué es necesario crear un Storage Account de la mano de un Function App?
   
   Se debe crear porque las funciones dependen de un almacenamiento en Azure para realizar manejo de triggers y el registro de ejecuciones de las funciones
   
 * ¿Cuáles son los tipos de planes para un Function App?, ¿En qué se diferencias?, mencione ventajas y desventajas de cada uno de ellos.
 
+  Existen tres tipos de planes: Consumption, Premium y Dedicated. El consumption plan, el cual es el plan por defecto, ofrece los servicios básicos como: escalabilidad automática y pagar solo cuando la aplicación es ejecutada, cuenta con una desventaja importante, y es que su timeout es de 5 minutos, con una memoria máxima por instancia de 1.5 GB y un almacenamiento de 1 GB y un máximo número de instancias de 200. En el plan premium encontramos también una escalabilidad dinámica, aunque en este caso la facturación se hace por el número en segundos de core y la memoria usada en las distintas instancias, este plan ofrece ventajas importantes como: timeouts que si se desea pueden ilimitados, memoria por instancia de 3.5 GB y un almacenamiento de hasta 250 GB, una desventaja de este plan ofrece 100 números de instacias, menor al plan anterior. Por último encontramos el Dedicated o App Service Plan, este se caracteriza principalmento porque en este caso la escalabilidad puede hacerse de manera manual si así lo desea el cliente, también cuenta con las ventajas de: timeouts ilimitados, memoría por instancia de 1.7 GB y una capacidad de almacenamiento de entre 50 a 1000 GB, la principal desventaja de este plan es su número limitado de instancias: de 10 a 20.
+
 * ¿Por qué la memoization falla o no funciona de forma correcta?
 
-  Esto se debe a que el entorno de ejecución libera los datos en memoria después de que el código lleva varios minutos sin ser ejecutado.
+  Esto se debe a que el entorno de ejecución libera los datos en memoria de la instancia después de que esta lleva más de 5 minutos inactiva. Además, hay que tener en cuenta que esta App fue hecha utilizando un Consumption plan, el cual nos ofrece 1.5 GB por instanca, esto puede causar que número muy grandes no logren ser calculados por falta de espacio en memoria.  
   
 * ¿Cómo funciona el sistema de facturación de las Function App?
+
+  La facturación se hace en base al consumo de recursos y el número de ejecuiones mensuales de un código o función. El consumo de recursos en azure se mide mediante GB-S (gigabytes-segundos), el cual se extrae de la multiplicación del tamaño medio de memoria en GB por el tiempo que dura la ejecución de la función medido en milisegundos. Por otra parte, el número de ejecuciones mensuales cuentan todas las veces que la función es corrida en respuesta a algún evento.
+
 * Informe
