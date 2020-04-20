@@ -37,6 +37,8 @@ Cuando un conjunto de usuarios consulta un enésimo número (superior a 1000000)
 
 5. Modifique la coleción de POSTMAN con NEWMAN de tal forma que pueda enviar 10 peticiones concurrentes. Verifique los resultados y presente un informe.
 
+![](images/part3/newman.png)
+
 6. Cree una nueva Function que resuleva el problema de Fibonacci pero esta vez utilice un enfoque recursivo con memoization. Pruebe la función varias veces, después no haga nada por al menos 5 minutos. Pruebe la función de nuevo con los valores anteriores. ¿Cuál es el comportamiento?.
 
 Transcurridos los 5 minutos de inactividad, la aplicación vacia la memoria. Esto hace que al volver a repetir la solicitud hecha, esta tome mucho más tiempo, ya que tiene que volver a calcular todos los números de nuevo.
@@ -48,10 +50,17 @@ Transcurridos los 5 minutos de inactividad, la aplicación vacia la memoria. Est
 * ¿Qué es un Azure Function?
 
   Es una modalidad de Azure que nos permite ejecutar y editar fragementos de código en la nube.
+  
 * ¿Qué es serverless?
 
   Se define como un tipo de arquitectura en la cual no existen servidores, ya sean físicos o en la nube, sino que el código corre se corre en un "ambiente de ejecución" que generalmente consiste en un contenedor sin estado administrado por un proveedor Cloud, en nuestro caso Azure. Esta arquitectura se caracterisa porque el cliente en este caso no se encarga de la administración de los recursos usados a la hora hora de ejecutar el código, sino que en esta ocasión la responsabilidad recae sobre el proveedor Cloud.
+
 * ¿Qué es el runtime y que implica seleccionarlo al momento de crear el Function App?
+
+  Runtime o tiempo de ejecución es el intervalo de tiempo en el que un programa de computadora se ejecuta en un sistema operativo. Este tiempo se inicia con la puesta en memoria principal del programa, por lo que el sistema operativo comienza a ejecutar sus instrucciones. El intervalo finaliza en el momento en que envía al sistema operativo la señal de terminación.
+
+  
+  
 
 * ¿Por qué es necesario crear un Storage Account de la mano de un Function App?
   
