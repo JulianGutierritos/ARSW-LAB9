@@ -78,3 +78,15 @@ Transcurridos los 5 minutos de inactividad, la aplicación vacia la memoria. Est
   La facturación se hace en base al consumo de recursos y el número de ejecuiones mensuales de un código o función. El consumo de recursos en azure se mide mediante GB-S (gigabytes-segundos), el cual se extrae de la multiplicación del tamaño medio de memoria en GB por el tiempo que dura la ejecución de la función medido en milisegundos. Por otra parte, el número de ejecuciones mensuales cuentan todas las veces que la función es corrida en respuesta a algún evento.
 
 * Informe
+
+Primero mandamos varias solicitudes post utilizando newman a la aplicación que no tenía implementada la memorización. Los número usados en cada solicitud fueron los siguientes: 6, 30 y 3000. 
+Los tiempos de respuesta obtenidos fueron:
+
+![](images/part2/Newman.png)
+
+Luego, se modificó la aplicación de usando el enfoque de memorización. 
+Se realizó la misma prueba con datos identicos y los resultados arrojados fueron los siguientes:
+
+![](images/part3/Newman2.png)
+
+Como podemos observar, cuando se uso memorización el tiempo de respuesta total fue disminuido en 3.6 segundos, como también el tiempo promedio de respuesta que disminuyó casi un 40%.
