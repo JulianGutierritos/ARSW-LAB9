@@ -59,7 +59,11 @@ Transcurridos los 5 minutos de inactividad, la aplicación vacia la memoria. Est
 
   Runtime o tiempo de ejecución es el intervalo de tiempo en el que un programa de computadora se ejecuta en un sistema operativo. Este tiempo se inicia con la puesta en memoria principal del programa, por lo que el sistema operativo comienza a ejecutar sus instrucciones. El intervalo finaliza en el momento en que envía al sistema operativo la señal de terminación.
 
+  Cuando se crea una Function App en Azure, al seleccionar un plan, en este caso el plan Consumption y la versión de runtime 2, se especifica que la duracion es de 5 minutos, osea el tiempo que se mantendra ejecutando la función en memoria de manera continua en la nube.
   
+  En Azure functions el runtime permite experimentar estas sin necesidad de comprometerse con la nube, así mismos, el codigo o funciones aue crees estara disponible en la nube.
+
+  Esto implica que que una parte de la aplicacion se correra en maquinas locales, esta caracteristica nos mermitenejecutar procesos por lotes en horas especificas entre otras cosas.
   
 
 * ¿Por qué es necesario crear un Storage Account de la mano de un Function App?

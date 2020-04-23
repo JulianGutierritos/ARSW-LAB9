@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "af2ec51a-b8de-4fac-8b05-568db57babf8",
+		"name": "postman.collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "FibonacciTest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e8479199-e8e8-4441-bd9b-d85e3b221794",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nth\": 6\r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://functionprojectfibonacci.azurewebsites.net/api/Fibonacci",
+					"protocol": "https",
+					"host": [
+						"functionprojectfibonacci",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"Fibonacci"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FibonacciTest Copy",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e8479199-e8e8-4441-bd9b-d85e3b221794",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nth\": 10000\r\n}"
+				},
+				"url": {
+					"raw": "https://functionprojectfibonacci.azurewebsites.net/api/Fibonacci",
+					"protocol": "https",
+					"host": [
+						"functionprojectfibonacci",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"api",
+						"Fibonacci"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
