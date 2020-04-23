@@ -84,8 +84,9 @@ Los tiempos de respuesta obtenidos fueron:
 
 ![](images/part2/Newman.png)
 
-Luego, se modificó la aplicación de usando el enfoque de memorización. 
-Se realizó la misma prueba con datos identicos y los resultados arrojados fueron los siguientes:
+Luego, se modificó la aplicación usando el enfoque de memorización. 
+
+Posteriormente, se realizó la misma prueba de antes con datos identicos. Los tiempos de respuesta obtenidos esta vez fueron:
 
 ![](images/part3/Newman2.png)
 
